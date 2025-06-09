@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beer BZ</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+<div class="topo">
+  <img src="salmon.jfif" alt="Ícone Chopp" class="icone" onclick="abrirModal('salmon.jfif')"/>
+  <h1>Beer BZ</h1>
+  <img src="black.jfif" alt="Ícone Lúpulo" class="icone" onclick="abrirModal('black.jfif')"/>
+</div>
+  </header>
+
+  <main>
+    <section id="cardapio">
+      <h2>Cardápio de Chops</h2>
+      <div class="produtos" id="listaProdutos">
+        <!-- Produtos serão inseridos por JavaScript -->
+      </div>
+    </section>
+
+    <section id="acessorios">
+  <h2>Roupas & Acessórios</h2>
+  <div class="produtos" id="listaAcessorios">
+    <!-- Produtos serão inseridos por JavaScript -->
+  </div>
+</section>
+
+    <section id="carrinho">
+      <h2>Seu Pedido</h2>
+      <ul id="itensCarrinho"></ul>
+      <p><strong>Total:</strong> R$ <span id="total">0.00</span></p>
+      <input type="text" id="nomeCliente" placeholder="Seu nome" required>
+      <input type="text" id="endereco" placeholder="Endereço de entrega" required>
+      <input type="text" id="telefone" placeholder="Telefone" required>
+      <button onclick="enviarPedido()">Finalizar via WhatsApp</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Choperia Artesanal - Todos os direitos reservados</p>
+  </footer>
+
+<div id="modal" class="modal">
+  <span class="fechar" onclick="fecharModal()">&times;</span>
+  <img class="modal-conteudo" id="imagemModal">
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
